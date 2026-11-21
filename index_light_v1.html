@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zero e Um Soluções | Integrações, automações e extração de dados para empresas</title>
+<meta name="description" content="Integramos sistemas, automatizamos rotinas e extraímos dados para empresas de qualquer porte e setor. Projetos sob medida, com escopo fechado e nota fiscal.">
+<meta property="og:title" content="Zero e Um Soluções">
+<meta property="og:description" content="Integrações, automações e extração de dados para empresas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zeroeumsolucoes.com.br/">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310223A'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='%23FFC72C' text-anchor='middle'%3E01%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#10223A;--ink-2:#1B3352;--yellow:#FFC72C;--soft:#F6F7F9;--steel:#5B6878;--text:#3C4A5B;--line:#E2E5E9;--white:#fff;--ok:#2FA36B;--wrap:1180px;--r:8px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:"Archivo",system-ui,sans-serif;color:var(--ink);background:var(--white);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.display{font-stretch:125%;font-weight:800;letter-spacing:-.02em;line-height:1.05}
+h2.display{font-size:clamp(2rem,4vw,3.1rem)}
+.lead{font-size:1.15rem;color:var(--steel);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:inherit;font-weight:650;font-size:1rem;padding:.85em 1.4em;border-radius:var(--r);border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-yellow:hover{background:#ffd457}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--white)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:var(--ink-2)}
+section{padding:112px 0}
+.alt{background:var(--soft)}
+.head{text-align:center;max-width:760px;margin:0 auto 64px}
+.head .lead{margin:18px auto 0}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:40px;height:40px;border-radius:9px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:-.04em}
+.brand b{font-stretch:115%;font-weight:750;font-size:1.05rem;letter-spacing:-.01em}
+.brand b span{display:block;font-size:.78rem;color:var(--steel);font-weight:400;line-height:1.1}
+.menu{display:flex;align-items:center;gap:30px;list-style:none}
+.menu a{text-decoration:none;font-size:.95rem;color:var(--text);transition:color .2s}
+.menu a:hover{color:var(--ink)}
+.menu a.btn{padding:.6em 1.1em;color:var(--ink)}
+.burger{display:none;background:none;border:0;color:var(--ink);cursor:pointer;padding:8px}
+
+/* HERO */
+.hero{padding:96px 0 104px;text-align:center;background:radial-gradient(ellipse 70% 55% at 50% 0%,#FFF6D6 0%,rgba(255,246,214,0) 70%)}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);max-width:15ch;margin:0 auto}
+.hero h1 mark{background:linear-gradient(transparent 60%,var(--yellow) 60%,var(--yellow) 92%,transparent 92%);color:inherit;padding:0 .08em}
+.hero p.sub{margin:28px auto 0;font-size:1.2rem;color:var(--text);max-width:52ch}
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:38px}
+.flow{max-width:820px;margin:72px auto 0;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px 26px 20px;box-shadow:0 30px 60px -30px rgba(16,34,58,.25);text-align:left}
+.flow-head{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--steel);margin-bottom:22px}
+.flow-head #flowTitle{color:var(--ink);font-weight:650}
+.flow-head .live{display:flex;align-items:center;gap:8px}
+.flow-head .live i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(47,163,107,.18)}
+.lane{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-bottom:30px}
+.lane::after{content:"";position:absolute;left:4%;right:4%;bottom:10px;height:5px;border-radius:3px;background:repeating-linear-gradient(90deg,#E6E9EE 0 18px,transparent 18px 28px)}
+.st{background:var(--soft);border:1.5px solid transparent;border-radius:12px;padding:16px 10px;text-align:center;transition:border-color .35s,background .35s}
+.st svg{width:30px;height:30px;margin:0 auto 8px;stroke:#8C99A9;fill:none;stroke-width:1.6;transition:stroke .35s}
+.st b{display:block;font-size:.88rem;font-weight:650;line-height:1.2}
+.st small{display:block;font-size:.76rem;color:var(--steel);margin-top:3px;line-height:1.25}
+.st.on{border-color:var(--yellow);background:#FFF8E0}
+.st.on svg{stroke:var(--ink)}
+.st.done svg{stroke:var(--ok)}
+.box{position:absolute;bottom:2px;left:4%;width:22px;height:22px;border-radius:5px;background:var(--yellow);box-shadow:0 0 0 4px rgba(255,199,44,.25);transition:left .9s cubic-bezier(.6,.05,.3,1);z-index:1}
+.log{list-style:none;font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;font-size:.8rem;line-height:1.75;color:var(--text);height:120px;overflow:hidden;border-top:1px solid var(--line);padding-top:12px}
+.log li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.log .t{color:#A0AAB7;margin-right:10px}
+.log .ok{color:#1F8A55}
+.log .warn{color:#B7791F}
+.facts{display:flex;justify-content:center;gap:64px;margin-top:64px}
+.facts div{font-size:.92rem;color:var(--steel);line-height:1.35}
+.facts strong{display:block;font-stretch:125%;font-weight:800;font-size:2.2rem;color:var(--ink);letter-spacing:-.02em;margin-bottom:4px}
+
+/* TILES */
+.tiles{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:24px 22px}
+.tile{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;position:relative;border-radius:12px;text-decoration:none}
+.tile-art{display:grid;place-items:center;aspect-ratio:4/3;border-radius:12px;overflow:hidden;position:relative;background:var(--tc)}
+.tile-art::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.35) 1.5px,transparent 1.6px);background-size:18px 18px}
+.tile-art svg{position:relative;width:34%;fill:none;stroke:var(--tf);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s ease}
+.tile-over{position:absolute;left:0;right:0;top:0;aspect-ratio:4/3;border-radius:12px;background:var(--to);display:grid;place-content:center;text-align:center;gap:10px;padding:24px;opacity:0;transition:opacity .3s ease;color:var(--tf2)}
+.tile-over b{font-stretch:115%;font-weight:750;font-size:1.45rem;line-height:1.2}
+.tile-over em{font-style:normal;font-weight:600;font-size:.95rem;justify-self:center;border-bottom:2px solid currentColor;padding-bottom:2px}
+.tile:hover .tile-over,.tile:focus-visible .tile-over{opacity:1}
+.tile:hover .tile-art svg{transform:scale(1.08)}
+.tile:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.tile-cap{display:block;padding:18px 2px 0}
+.tile-cap b{display:block;font-weight:700;font-size:1.12rem;line-height:1.3}
+.tile-cap small{display:block;color:var(--steel);font-size:.95rem;margin-top:4px;line-height:1.5}
+.kind{display:inline-block;font-size:.8rem;font-weight:650;color:var(--tf);background:var(--tc);padding:2px 10px;border-radius:100px;margin-bottom:8px}
+.t-navy{--tc:#DCE3EC;--tf:#10223A;--to:rgba(16,34,58,.94);--tf2:#fff}
+.t-yellow{--tc:#FFE9A8;--tf:#10223A;--to:rgba(255,199,44,.96);--tf2:#10223A}
+.t-teal{--tc:#CDEBEA;--tf:#1F6F74;--to:rgba(31,111,116,.95);--tf2:#fff}
+.t-blue{--tc:#D7E2F7;--tf:#2E5AAC;--to:rgba(46,90,172,.95);--tf2:#fff}
+.t-green{--tc:#D3EEDD;--tf:#22744A;--to:rgba(34,116,74,.95);--tf2:#fff}
+.t-slate{--tc:#ECEDEF;--tf:#5B6878;--to:rgba(91,104,120,.95);--tf2:#fff}
+.bul{list-style:none;display:grid;gap:9px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.bul li{display:grid;grid-template-columns:16px 1fr;gap:8px;font-size:.94rem;line-height:1.45;color:var(--text)}
+.bul li::before{content:"";width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px #FFE9A8}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.meta span{font-size:.8rem;border:1px solid var(--line);padding:3px 10px;border-radius:100px;color:var(--steel);background:var(--white)}
+
+/* CENÁRIOS */
+.picker{display:grid;grid-template-columns:380px 1fr;background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 50px -35px rgba(16,34,58,.3)}
+.tabs{list-style:none;border-right:1px solid var(--line);background:#FBFBFC}
+.tabs button{all:unset;box-sizing:border-box;display:block;width:100%;padding:21px 28px;cursor:pointer;border-bottom:1px solid var(--line);position:relative;font-weight:600;font-size:1rem;line-height:1.35;color:var(--steel);transition:background .2s,color .2s}
+.tabs li:last-child button{border-bottom:0}
+.tabs button:hover{color:var(--ink);background:#fff}
+.tabs button[aria-selected="true"]{color:var(--ink);background:#fff}
+.tabs button[aria-selected="true"]::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--yellow)}
+.tabs button:focus-visible{outline-offset:-3px}
+.panel{padding:48px 52px;display:none}
+.panel.active{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel h3{font-stretch:115%;font-weight:750;font-size:1.65rem;line-height:1.15;letter-spacing:-.01em;max-width:26ch}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:30px 0}
+.compare div{padding:22px 24px;border-radius:12px}
+.compare .before{background:#FBF1EE}
+.compare .after{background:#EAF6EF}
+.compare h4{display:flex;align-items:center;gap:8px;font-size:.95rem;font-weight:700;margin-bottom:8px}
+.compare .before h4{color:#B23D27}
+.compare .after h4{color:#1F7A4D}
+.compare h4 i{width:8px;height:8px;border-radius:50%;background:currentColor}
+.compare p{font-size:.98rem;color:var(--text)}
+.deliver{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:.92rem;color:var(--steel)}
+.deliver span.tag{background:var(--soft);color:var(--ink);padding:5px 12px;border-radius:100px;font-weight:550}
+
+/* COMO ATUAMOS */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:27px;left:28px;right:12%;height:3px;background:repeating-linear-gradient(90deg,var(--yellow) 0 14px,transparent 14px 24px)}
+.steps li{counter-increment:s;padding-right:28px;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--white);border:3px solid var(--yellow);color:var(--ink);font-stretch:125%;font-weight:800;font-size:1.25rem;margin-bottom:24px;position:relative}
+.steps h3{font-size:1.12rem;font-weight:700;margin-bottom:8px}
+.steps p{font-size:.97rem;color:var(--text)}
+.terms{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:72px}
+.terms div{background:var(--soft);border-radius:12px;padding:24px}
+.terms b{display:block;font-weight:700;margin-bottom:6px}
+.terms span{font-size:.94rem;color:var(--text);line-height:1.5;display:block}
+
+/* EMPRESA */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pillars div{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px}
+.pillars h3{font-stretch:112%;font-weight:750;font-size:1.25rem;margin-bottom:10px}
+.pillars p{color:var(--text);font-size:1rem}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:22px 0 64px}
+.nums div{text-align:center;padding:28px 20px}
+.nums strong{display:block;font-stretch:125%;font-weight:800;font-size:2.8rem;letter-spacing:-.02em;line-height:1}
+.nums span{font-size:.95rem;color:var(--steel);display:block;margin-top:10px;line-height:1.4}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.cols h4{font-size:1rem;font-weight:700;margin-bottom:6px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.sectors{list-style:none}
+.sectors li{display:flex;align-items:center;gap:12px;font-size:1rem;padding:10px 0;border-bottom:1px solid var(--line)}
+.sectors li::before{content:"";width:8px;height:8px;flex:none;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 2px #FFE9A8}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{background:var(--white);border:1px solid var(--line);font-size:.86rem;padding:5px 12px;border-radius:100px}
+
+/* CONTATO */
+.contact-head{text-align:center;max-width:720px;margin:0 auto 56px}
+.contact-head .lead{margin:18px auto 0}
+.contact-alt{text-align:center;margin-top:56px;color:var(--steel)}
+.contact-alt a{color:var(--ink);font-weight:650;text-decoration:none;border-bottom:2px solid var(--yellow);word-break:break-all}
+.contact-alt a:hover{border-color:var(--ink)}
+dialog{border:0;border-radius:16px;padding:0;width:min(600px,calc(100% - 32px));margin:auto;box-shadow:0 30px 80px -20px rgba(16,34,58,.45)}
+dialog::backdrop{background:rgba(16,34,58,.5);backdrop-filter:blur(3px)}
+dialog[open]{animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+form{display:grid;gap:16px;padding:36px;position:relative;background:var(--white)}
+form h3{font-stretch:115%;font-weight:750;font-size:1.6rem;line-height:1.1;margin-top:-4px}
+.dlg-chip{justify-self:start;background:var(--yellow);color:var(--ink);font-weight:650;font-size:.85rem;padding:5px 12px;border-radius:100px}
+.dlg-x{position:absolute;top:14px;right:16px;background:none;border:0;font-size:2rem;line-height:1;color:var(--steel);cursor:pointer;padding:4px 8px;border-radius:6px}
+.dlg-x:hover{color:var(--ink);background:var(--soft)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{display:grid;gap:6px;font-size:.9rem;font-weight:600}
+input,textarea{font:inherit;font-size:1rem;padding:.75em .9em;border:1.5px solid var(--line);border-radius:var(--r);background:#FAFAFB;color:var(--ink);width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--ink);background:#fff;box-shadow:0 0 0 3px rgba(255,199,44,.6)}
+textarea{min-height:120px;resize:vertical}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.form-foot small{color:var(--steel);font-size:.85rem;flex:1;min-width:180px}
+.msg{font-size:.92rem;font-weight:600;color:#1F7A4D;display:none}
+.msg.err{color:#B23D27}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);color:var(--steel);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding-top:36px;padding-bottom:36px;align-items:center}
+footer a{text-decoration:none;color:var(--ink)}
+footer a:hover{text-decoration:underline}
+footer nav{display:flex;gap:24px}
+
+@media (max-width:1020px){
+  .picker{grid-template-columns:1fr}
+  .tabs{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .tabs li{flex:0 0 auto}
+  .tabs button{border-bottom:0;border-right:1px solid var(--line);width:auto;max-width:240px;padding:16px 20px;font-size:.92rem}
+  .tabs button[aria-selected="true"]::before{left:0;right:0;top:auto;bottom:0;width:auto;height:3px}
+  .tiles{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:48px}
+  .steps::before{display:none}
+  .terms{grid-template-columns:1fr 1fr}
+  .pillars{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  .menu{position:fixed;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--white);padding:8px 28px 24px;display:none;border-bottom:1px solid var(--line);box-shadow:0 20px 30px -20px rgba(16,34,58,.2)}
+  .menu.open{display:flex}
+  .menu li a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .menu li:last-child a{margin-top:16px;justify-content:center;border:0}
+  .burger{display:block}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:80px 0}
+  .hero{padding:64px 0 80px}
+  .facts{gap:22px}
+  .facts strong{font-size:1.6rem}
+  .facts div{font-size:.8rem}
+  .flow{padding:18px 12px 14px;margin-top:52px}
+  .st{padding:10px 4px}
+  .st svg{width:24px;height:24px}
+  .st b{font-size:.74rem}
+  .st small{display:none}
+  .log{font-size:.72rem}
+  .panel{padding:32px 22px}
+  .panel h3{font-size:1.4rem}
+  .compare{grid-template-columns:1fr}
+  .tiles{grid-template-columns:1fr}
+  .tiles.small{grid-template-columns:1fr 1fr;gap:14px}
+  .tiles.small .tile-art{aspect-ratio:1}
+  .tiles.small .tile-cap b{font-size:.95rem}
+  .tiles.small .tile-cap small{font-size:.8rem}
+  .tile-over{display:none}
+  .steps,.terms,.nums,.cols{grid-template-columns:1fr}
+  .nums{gap:0}
+  .row2{grid-template-columns:1fr}
+  form{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Zero e Um Soluções, início">
+      <span class="mark" aria-hidden="true">01</span>
+      <b>Zero e Um Soluções<span>Integrações, automações e dados</span></b>
+    </a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#cenarios">Cenários</a></li>
+      <li><a href="#projetos">Cases</a></li>
+      <li><a href="#como">Como atuamos</a></li>
+      <li><a href="#empresa">A empresa</a></li>
+      <li><a class="btn btn-yellow" href="#contato">Solicitar proposta</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <h1 class="display">Sistemas que conversam. <mark>Rotinas que rodam sozinhas.</mark></h1>
+    <p class="sub">Integrações, automações e extração de dados para empresas que querem parar de copiar, colar e redigitar. Conectamos o que você já usa e deixamos a sua equipe livre para o trabalho que importa.</p>
+    <div class="ctas">
+      <a class="btn btn-yellow" href="#contato">Solicitar proposta</a>
+      <a class="btn btn-ghost" href="#projetos">Conhecer os cases</a>
+    </div>
+
+    <div class="flow" aria-label="Demonstração de uma automação em execução">
+      <div class="flow-head">
+        <span id="flowTitle">Pedidos da loja virtual para o ERP</span>
+        <span class="live"><i></i>em execução</span>
+      </div>
+      <div class="lane" id="lane">
+        <div class="st"><svg viewBox="0 0 24 24"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 12h7M9 16h7"/></svg><b>Origem</b><small>arquivos, e-mails, portais</small></div>
+        <div class="st"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><b>Tratamento</b><small>validação e regras</small></div>
+        <div class="st"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><b>Destino</b><small>ERP, CRM, banco de dados</small></div>
+        <div class="st"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 17v-5M10 17V8M14 17v-3M18 17V6"/></svg><b>Entrega</b><small>relatório e alerta</small></div>
+        <span class="box" id="box" aria-hidden="true"></span>
+      </div>
+      <ul class="log" id="log" aria-live="off"></ul>
+    </div>
+
+    <div class="facts">
+      <div><strong>300+</strong>projetos de automação<br>e integração</div>
+      <div><strong>15+</strong>anos de experiência<br>em tecnologia e processos</div>
+      <div><strong>100%</strong>sob medida, com<br>escopo fechado</div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display">Três frentes para tirar o trabalho manual da sua empresa</h2>
+      <p class="lead">Atuamos com o ERP, CRM, e-commerce, planilhas ou sistema próprio que a sua empresa já usa. Sem trocar de sistema e sem projetos que se arrastam por meses.</p>
+    </div>
+    <ul class="tiles">
+      <li class="svc">
+        <button class="tile t-navy" type="button" data-servico="Integração entre sistemas">
+          <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="4" y="18" width="18" height="28" rx="3"/><rect x="42" y="18" width="18" height="28" rx="3"/><path d="M26 27h12M34 23l4 4-4 4"/><path d="M38 37H26M30 33l-4 4 4 4"/></svg></span>
+          <span class="tile-over" aria-hidden="true"><b>Integrações</b><em>Solicitar proposta</em></span>
+          <span class="tile-cap"><b>Integrações</b><small>Sistemas trocando informações sozinhos, sem redigitação e sem planilha no meio do caminho.</small></span>
+        </button>
+        <ul class="bul"><li>Integração entre ERP, CRM, e-commerce e sistemas próprios</li><li>APIs REST, webhooks e conexão direta com banco de dados</li><li>Importação e exportação agendada de arquivos (Excel, CSV, XML, TXT)</li><li>Documentos fiscais e cadastros sincronizados entre sistemas</li></ul>
+      </li>
+      <li class="svc">
+        <button class="tile t-yellow" type="button" data-servico="Automação de rotinas">
+          <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="8"/><path d="M32 12v6M32 46v6M12 32h6M46 32h6M18 18l4 4M42 42l4 4M18 46l4-4M42 22l4-4"/><path d="M29 32l2 2 4-4"/></svg></span>
+          <span class="tile-over" aria-hidden="true"><b>Automações</b><em>Solicitar proposta</em></span>
+          <span class="tile-cap"><b>Automações</b><small>Rotinas repetitivas executadas por robôs e agendamentos, com aviso quando algo sai do esperado.</small></span>
+        </button>
+        <ul class="bul"><li>Robôs (RPA) para sistemas e portais sem integração</li><li>Envio automático de e-mails, relatórios e notificações no Teams</li><li>Formulários e checklists digitais com foto, assinatura e PDF</li><li>Cadastros e atualizações em massa</li></ul>
+      </li>
+      <li class="svc">
+        <button class="tile t-teal" type="button" data-servico="Extração de dados">
+          <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 8h22l10 10v34H14z"/><path d="M36 8v10h10M20 26h20M20 33h14"/><path d="M40 40l8 8M48 40v8h-8"/></svg></span>
+          <span class="tile-over" aria-hidden="true"><b>Extração e análise de dados</b><em>Solicitar proposta</em></span>
+          <span class="tile-cap"><b>Extração e análise de dados</b><small>Informação espalhada em PDFs, e-mails, sites e sistemas transformada em dado confiável.</small></span>
+        </button>
+        <ul class="bul"><li>Extração de dados de PDFs, planilhas, anexos e documentos</li><li>Coleta automática de dados em sites e portais</li><li>Bases de dados organizadas, com cargas diárias</li><li>Indicadores, painéis e relatórios automáticos</li></ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="cenarios" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display">Reconhece algum destes cenários?</h2>
+      <p class="lead">Escolha uma situação e veja como ela fica depois da automação. Se a sua não estiver aqui, conte para nós: a maioria dos processos repetitivos pode ser automatizada.</p>
+    </div>
+    <div class="picker">
+      <ul class="tabs" role="tablist" aria-label="Cenários que resolvemos">
+        <li><button role="tab" id="t1" aria-controls="p1" aria-selected="true">Os sistemas da empresa não conversam entre si</button></li>
+        <li><button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">A equipe passa horas copiando e colando</button></li>
+        <li><button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Dados presos em PDFs, e-mails e sites</button></li>
+        <li><button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Relatórios montados à mão toda semana</button></li>
+        <li><button role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1">Processos em papel e planilhas soltas</button></li>
+        <li><button role="tab" id="t6" aria-controls="p6" aria-selected="false" tabindex="-1">Ninguém fica sabendo quando algo dá errado</button></li>
+      </ul>
+
+      <div class="panel active" id="p1" role="tabpanel" aria-labelledby="t1">
+        <h3>A informação entra uma vez e chega a todos os sistemas.</h3>
+        <div class="compare">
+          <div class="before"><h4><i></i>Hoje</h4><p>O pedido entra na loja virtual e é digitado no ERP. O cliente é cadastrado no CRM e de novo no financeiro. Cada redigitação é uma chance de erro.</p></div>
+          <div class="after"><h4><i></i>Com a integração</h4><p>Os sistemas trocam dados por API, banco ou arquivo, em tempo real ou em horários definidos. O que não passa na validação volta com o motivo.</p></div>
+        </div>
+        <div class="deliver">Exemplos: <span class="tag">E-commerce com ERP</span><span class="tag">CRM com financeiro</span><span class="tag">Documentos fiscais no sistema de gestão</span></div>
+      </div>
+
+      <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+        <h3>O robô faz o trabalho repetitivo. A equipe confere o resultado.</h3>
+        <div class="compare">
+          <div class="before"><h4><i></i>Hoje</h4><p>Alguém baixa arquivos, abre planilhas, copia valores e preenche telas de sistemas e portais, todos os dias, do mesmo jeito.</p></div>
+          <div class="after"><h4><i></i>Com a automação</h4><p>Um robô executa a rotina no horário certo, inclusive em sistemas sem API, e envia um resumo do que fez e do que precisa de atenção.</p></div>
+        </div>
+        <div class="deliver">Exemplos: <span class="tag">Lançamentos em portais</span><span class="tag">Conciliações</span><span class="tag">Atualização de preços e estoque</span></div>
+      </div>
+
+      <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+        <h3>Documentos lidos e organizados automaticamente.</h3>
+        <div class="compare">
+          <div class="before"><h4><i></i>Hoje</h4><p>Boletos, notas, pedidos e relatórios chegam em PDF ou por e-mail. Alguém abre um por um para tirar valores, datas e códigos.</p></div>
+          <div class="after"><h4><i></i>Com a extração</h4><p>Os documentos são lidos assim que chegam, os dados vão para uma planilha, banco ou sistema, e as exceções são separadas para revisão.</p></div>
+        </div>
+        <div class="deliver">Exemplos: <span class="tag">Leitura de PDFs e anexos</span><span class="tag">Coleta em sites e portais</span><span class="tag">Documentos fiscais em XML</span></div>
+      </div>
+
+      <div class="panel" id="p4" role="tabpanel" aria-labelledby="t4" hidden>
+        <h3>Indicadores atualizados todos os dias, sem planilha.</h3>
+        <div class="compare">
+          <div class="before"><h4><i></i>Hoje</h4><p>Toda semana alguém exporta dados de vários sistemas, cola em planilhas e monta o relatório. Quando fica pronto, os números já estão velhos.</p></div>
+          <div class="after"><h4><i></i>Com os dados organizados</h4><p>Os dados são carregados automaticamente em uma base própria e viram painéis e relatórios em PDF ou Excel, enviados para cada área ou cliente.</p></div>
+        </div>
+        <div class="deliver">Exemplos: <span class="tag">Painéis de indicadores</span><span class="tag">Relatório diário por e-mail</span><span class="tag">Base de dados consolidada</span></div>
+      </div>
+
+      <div class="panel" id="p5" role="tabpanel" aria-labelledby="t5" hidden>
+        <h3>Formulários digitais com evidência e fluxo definido.</h3>
+        <div class="compare">
+          <div class="before"><h4><i></i>Hoje</h4><p>Vistorias, inspeções e solicitações são feitas em papel ou em planilhas que circulam por e-mail. As fotos se perdem e ninguém sabe em que etapa está.</p></div>
+          <div class="after"><h4><i></i>Com o processo digital</h4><p>Formulários no celular, mesmo sem internet, com foto e assinatura. O registro gera PDF, alimenta a base de dados e avisa os responsáveis.</p></div>
+        </div>
+        <div class="deliver">Exemplos: <span class="tag">Checklists e vistorias</span><span class="tag">Inspeções de qualidade</span><span class="tag">Solicitações e aprovações</span></div>
+      </div>
+
+      <div class="panel" id="p6" role="tabpanel" aria-labelledby="t6" hidden>
+        <h3>Alertas automáticos antes que o problema vire prejuízo.</h3>
+        <div class="compare">
+          <div class="before"><h4><i></i>Hoje</h4><p>O estoque acaba, a integração para ou o prazo vence, e a empresa só descobre quando o cliente reclama.</p></div>
+          <div class="after"><h4><i></i>Com o monitoramento</h4><p>Regras acompanham os dados o tempo todo e avisam por e-mail ou Teams quem precisa agir, com a informação necessária para resolver.</p></div>
+        </div>
+        <div class="deliver">Exemplos: <span class="tag">Ruptura de estoque</span><span class="tag">Falha de integração</span><span class="tag">Vencimentos e prazos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projetos">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display">Cases demonstrativos, abertos para teste</h2>
+      <p class="lead">Soluções completas, publicadas com dados fictícios, testes automáticos e modo de demonstração. Cada uma mostra uma das frentes de serviço da Zero e Um.</p>
+    </div>
+    <ul class="tiles">
+      <li>
+        <a class="tile t-green" href="https://github.com/iR0ndD2/checklist-automatizado-odk" target="_blank" rel="noopener">
+          <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="16" y="8" width="32" height="48" rx="4"/><path d="M24 20l3 3 5-5M36 20h6M24 32l3 3 5-5M36 32h6M24 44h18"/></svg></span>
+          <span class="tile-over" aria-hidden="true"><b>Checklist digital com evidências</b><em>Ver no GitHub</em></span>
+          <span class="tile-cap"><span class="kind">Automação</span><b>Checklist digital com evidências</b><small>Inspeções no celular, mesmo sem internet, com foto, assinatura, PDF e alerta por e-mail. Três cenários: vistoria de veículos, recebimento de mercadorias e manutenção industrial.</small></span>
+        </a>
+        <div class="meta"><span>ODK</span><span>Python</span><span>PostgreSQL</span><span>12 testes</span></div>
+      </li>
+      <li>
+        <a class="tile t-blue" href="https://github.com/iR0ndD2/integracao-nfe-api" target="_blank" rel="noopener">
+          <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 8h20l8 8v20"/><path d="M30 8v8h8M16 22h14M16 29h10"/><path d="M10 8v44h18"/><path d="M36 46h20M50 40l6 6-6 6"/></svg></span>
+          <span class="tile-over" aria-hidden="true"><b>Integração de documentos fiscais</b><em>Ver no GitHub</em></span>
+          <span class="tile-cap"><span class="kind">Integração</span><b>Integração de documentos fiscais</b><small>Lê o XML da nota fiscal, aplica 13 regras de validação, converte códigos e grava no sistema de gestão por API, conferindo o que foi gravado. Já preparada para o CNPJ alfanumérico.</small></span>
+        </a>
+        <div class="meta"><span>Python</span><span>API REST</span><span>FastAPI</span><span>26 testes</span></div>
+      </li>
+      <li>
+        <a class="tile t-teal" href="https://github.com/iR0ndD2/pipeline-dados-logistica" target="_blank" rel="noopener">
+          <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><ellipse cx="24" cy="14" rx="14" ry="6"/><path d="M10 14v26c0 3.3 6.3 6 14 6M38 14v12M10 27c0 3.3 6.3 6 14 6"/><path d="M36 56V42M44 56V34M52 56V46"/></svg></span>
+          <span class="tile-over" aria-hidden="true"><b>Base de dados e relatórios automáticos</b><em>Ver no GitHub</em></span>
+          <span class="tile-cap"><span class="kind">Dados</span><b>Base de dados e relatórios automáticos</b><small>Carga diária via API, dados organizados em camadas, indicadores em SQL, painel e relatório em PDF e Excel enviado a cada cliente só com os dados dele.</small></span>
+        </a>
+        <div class="meta"><span>Python</span><span>PostgreSQL</span><span>SQL</span><span>12 testes</span></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="como" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display">Como atuamos, do primeiro contato à entrega</h2>
+      <p class="lead">Projetos sob demanda, com escopo e prazo combinados antes de começar. Você sabe o que vai receber e quanto vai pagar.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Conversa inicial</h3><p>Você apresenta o desafio. Entendemos o processo e os sistemas envolvidos.</p></li>
+      <li><h3>Proposta com escopo fechado</h3><p>O que será entregue, o prazo e o valor, por escrito. Sem surpresa no meio do caminho.</p></li>
+      <li><h3>Desenvolvimento e demonstração</h3><p>A solução é construída, testada com dados reais da sua empresa e apresentada funcionando antes da liberação.</p></li>
+      <li><h3>Entrega documentada</h3><p>Código, manual de uso e de manutenção ficam com a sua empresa, sem dependência da Zero e Um.</p></li>
+    </ol>
+    <div class="terms">
+      <div><b>Atendimento remoto</b><span>Para qualquer região do Brasil, por videochamada e acesso combinado.</span></div>
+      <div><b>Nota fiscal</b><span>Empresa formalizada, com contrato de prestação de serviço e nota.</span></div>
+      <div><b>Qualquer sistema</b><span>ERP, CRM, e-commerce, planilhas ou sistema próprio: trabalhamos com o que já existe.</span></div>
+      <div><b>Confidencialidade</b><span>Os dados são da sua empresa. Acordo de confidencialidade quando necessário.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="empresa">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display">Tecnologia que começa pelo processo</h2>
+      <p class="lead">A Zero e Um Soluções une experiência em operação e tecnologia. Antes de automatizar, entendemos como o trabalho acontece de verdade, para entregar uma solução que a equipe usa no dia seguinte.</p>
+    </div>
+    <div class="pillars">
+      <div><h3>Resultado mensurável</h3><p>Cada projeto é medido pelas horas e pelos erros que elimina, não pela tecnologia usada.</p></div>
+      <div><h3>Independente de sistema</h3><p>Trabalhamos com os sistemas que a empresa já usa, por API, arquivo, banco de dados ou robô, sem exigir troca de sistema.</p></div>
+      <div><h3>Entrega que fica com você</h3><p>Cada projeto termina com código, documentação e manual de manutenção entregues ao cliente.</p></div>
+    </div>
+    <div class="nums">
+      <div><strong>15+</strong><span>anos de experiência em tecnologia e processos</span></div>
+      <div><strong>300+</strong><span>projetos de automação, integração e melhoria no histórico técnico</span></div>
+      <div><strong>3</strong><span>cases demonstrativos abertos, com testes automáticos</span></div>
+    </div>
+    <div class="cols">
+      <div>
+        <h4>Para quem</h4>
+        <ul class="sectors">
+          <li>Indústrias</li>
+          <li>Logística, transporte e armazenagem</li>
+          <li>Comércio, distribuição e e-commerce</li>
+          <li>Prestadores de serviço e escritórios</li>
+          <li>Empresas de qualquer porte com processos repetitivos</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tecnologias</h4>
+        <div class="chips"><span>Python</span><span>SQL</span><span>PostgreSQL</span><span>SQL Server</span><span>Oracle</span><span>APIs REST</span><span>RPA</span><span>ODK</span><span>Docker</span><span>Linux</span><span>Microsoft 365</span><span>Microsoft Graph</span><span>Gestão ágil</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="alt">
+  <div class="wrap">
+    <div class="contact-head">
+      <h2 class="display">Como podemos ajudar a sua empresa?</h2>
+      <p class="lead">Escolha o tipo de serviço e conte o que acontece hoje. Não precisa saber a solução técnica: retornamos com os próximos passos.</p>
+    </div>
+    <ul class="tiles small">
+      <li><button class="tile t-navy" type="button" data-servico="Integração entre sistemas">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="4" y="18" width="18" height="28" rx="3"/><rect x="42" y="18" width="18" height="28" rx="3"/><path d="M26 27h12M34 23l4 4-4 4"/><path d="M38 37H26M30 33l-4 4 4 4"/></svg></span>
+        <span class="tile-over" aria-hidden="true"><b>Integração entre sistemas</b><em>Solicitar proposta</em></span>
+        <span class="tile-cap"><b>Integração entre sistemas</b><small>ERP, CRM, e-commerce, APIs e arquivos</small></span>
+      </button></li>
+      <li><button class="tile t-yellow" type="button" data-servico="Automação de rotinas">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="8"/><path d="M32 12v6M32 46v6M12 32h6M46 32h6M18 18l4 4M42 42l4 4M18 46l4-4M42 22l4-4"/><path d="M29 32l2 2 4-4"/></svg></span>
+        <span class="tile-over" aria-hidden="true"><b>Automação de rotinas</b><em>Solicitar proposta</em></span>
+        <span class="tile-cap"><b>Automação de rotinas</b><small>Robôs, agendamentos e notificações</small></span>
+      </button></li>
+      <li><button class="tile t-teal" type="button" data-servico="Extração de dados">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 8h22l10 10v34H14z"/><path d="M36 8v10h10M20 26h20M20 33h14"/><path d="M40 40l8 8M48 40v8h-8"/></svg></span>
+        <span class="tile-over" aria-hidden="true"><b>Extração de dados</b><em>Solicitar proposta</em></span>
+        <span class="tile-cap"><b>Extração de dados</b><small>PDFs, e-mails, sites e portais</small></span>
+      </button></li>
+      <li><button class="tile t-blue" type="button" data-servico="Relatórios e indicadores">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M8 54h48"/><rect x="13" y="34" width="7" height="16" rx="1"/><rect x="26" y="22" width="7" height="28" rx="1"/><rect x="39" y="28" width="7" height="22" rx="1"/><path d="M12 22l14-10 12 8 14-10"/></svg></span>
+        <span class="tile-over" aria-hidden="true"><b>Relatórios e indicadores</b><em>Solicitar proposta</em></span>
+        <span class="tile-cap"><b>Relatórios e indicadores</b><small>Painéis e relatórios automáticos</small></span>
+      </button></li>
+      <li><button class="tile t-green" type="button" data-servico="Formulários e checklists digitais">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="16" y="8" width="32" height="48" rx="4"/><path d="M24 20l3 3 5-5M36 20h6M24 32l3 3 5-5M36 32h6M24 44h18"/></svg></span>
+        <span class="tile-over" aria-hidden="true"><b>Formulários e checklists digitais</b><em>Solicitar proposta</em></span>
+        <span class="tile-cap"><b>Formulários e checklists digitais</b><small>Celular, foto, assinatura e PDF</small></span>
+      </button></li>
+      <li><button class="tile t-slate" type="button" data-servico="Outro assunto">
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 10a16 16 0 0 1 9 29v5H23v-5a16 16 0 0 1 9-29z"/><path d="M25 50h14M28 55h8"/></svg></span>
+        <span class="tile-over" aria-hidden="true"><b>Outro assunto</b><em>Solicitar proposta</em></span>
+        <span class="tile-cap"><b>Outro assunto</b><small>Conte a sua ideia</small></span>
+      </button></li>
+    </ul>
+    <p class="contact-alt">Prefere escrever direto? <a href="mailto:rondinele.clemente@zeroeumsolucoes.com.br">rondinele.clemente@zeroeumsolucoes.com.br</a></p>
+  </div>
+
+  <dialog id="dlg" aria-labelledby="dlgTitle">
+    <form id="form" novalidate>
+      <button class="dlg-x" type="button" aria-label="Fechar" data-close>&times;</button>
+      <span class="dlg-chip" id="dlgChip">Integração entre sistemas</span>
+      <h3 id="dlgTitle">Solicitar proposta</h3>
+      <input type="hidden" name="assunto" value="">
+      <div class="row2">
+        <label>Seu nome<input name="nome" autocomplete="name" required></label>
+        <label>Empresa<input name="empresa" autocomplete="organization"></label>
+      </div>
+      <label>Seu e-mail<input name="email" type="email" autocomplete="email" required></label>
+      <label>O que acontece hoje?<textarea name="mensagem" required placeholder="Ex.: todo dia baixamos os pedidos da loja virtual e digitamos no ERP."></textarea></label>
+      <div class="form-foot">
+        <button class="btn btn-ink" type="submit">Solicitar proposta</button>
+        <small>O botão abre seu programa de e-mail com a mensagem pronta.</small>
+      </div>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </dialog>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> Zero e Um Soluções. Itajaí, SC.</span>
+    <nav aria-label="Links do rodapé">
+      <a href="mailto:rondinele.clemente@zeroeumsolucoes.com.br">E-mail</a>
+      <a href="https://github.com/iR0ndD2" target="_blank" rel="noopener">GitHub</a>
+      <a href="#inicio">Voltar ao topo</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // menu mobile
+  var burger = document.querySelector('.burger'), menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded', false); }); });
+
+  // abas de problemas
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(t){
+    tabs.forEach(function(x){
+      var on = x === t;
+      x.setAttribute('aria-selected', on);
+      x.tabIndex = on ? 0 : -1;
+      var p = document.getElementById(x.getAttribute('aria-controls'));
+      p.hidden = !on; p.classList.toggle('active', on);
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      var k = e.key, n = null;
+      if (k === 'ArrowDown' || k === 'ArrowRight') n = tabs[(i+1) % tabs.length];
+      if (k === 'ArrowUp' || k === 'ArrowLeft') n = tabs[(i-1+tabs.length) % tabs.length];
+      if (n){ e.preventDefault(); n.focus(); select(n); }
+    });
+  });
+
+  // fluxo animado do hero
+  var st = document.querySelectorAll('.st'), box = document.getElementById('box'), log = document.getElementById('log');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pos = ['4%','29%','54%','79%'];
+  var titulo = document.getElementById('flowTitle');
+  var cenarios = [
+    {t:'Pedidos da loja virtual para o ERP', l:['184 pedidos novos na loja virtual','<span class="ok">184 de 184 pedidos validados</span>','pedidos lançados no ERP via API','<span class="ok">resumo enviado ao comercial</span>']},
+    {t:'Tabela de preços do fornecedor', l:['tabela_precos.xlsx recebida, 3.420 linhas','<span class="warn">12 linhas com código inválido separadas</span>','3.408 preços atualizados no sistema','<span class="ok">divergências enviadas ao compras</span>']},
+    {t:'Leitura de boletos em PDF', l:['37 PDFs lidos da caixa de entrada','<span class="ok">CNPJ, valor e vencimento extraídos</span>','contas a pagar lançadas no financeiro','<span class="warn">alerta: 3 vencimentos amanhã</span>']},
+    {t:'Relatório diário de vendas', l:['dados coletados de 3 sistemas e 1 portal','<span class="ok">bases consolidadas sem duplicidade</span>','indicadores gravados no banco de dados','<span class="ok">painel atualizado e PDF enviado à diretoria</span>']}
+  ];
+  var k = 0;
+  function hora(){ var d = new Date(); return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)+':'+('0'+d.getSeconds()).slice(-2); }
+  function add(html){
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="t">'+hora()+'</span>'+html;
+    log.appendChild(li);
+    while (log.children.length > 5) log.removeChild(log.firstChild);
+  }
+  function stage(i){
+    st.forEach(function(s, j){ s.classList.toggle('on', j === i); s.classList.toggle('done', j < i); });
+    box.style.left = pos[i];
+  }
+  function ciclo(){
+    var c = cenarios[k++ % cenarios.length], p = 0;
+    titulo.textContent = c.t;
+    (function next(){
+      stage(p); add(c.l[p]); p++;
+      setTimeout(p < 4 ? next : ciclo, p < 4 ? 1300 : 2400);
+    })();
+  }
+  if (reduce){
+    stage(3); cenarios[0].l.forEach(add);
+  } else { ciclo(); }
+
+  // contato: blocos de serviço + formulário
+  var dlg = document.getElementById('dlg'), form = document.getElementById('form'), msg = document.getElementById('msg');
+  var chip = document.getElementById('dlgChip'), ultimo = null;
+  document.querySelectorAll('.tile').forEach(function(b){
+    b.addEventListener('click', function(){
+      ultimo = b;
+      var sv = b.getAttribute('data-servico');
+      chip.textContent = sv; form.elements.assunto.value = sv;
+      msg.style.display = 'none';
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+      setTimeout(function(){ form.elements.nome.focus(); }, 50);
+    });
+  });
+  function fechar(){ dlg.close ? dlg.close() : dlg.removeAttribute('open'); }
+  dlg.querySelector('[data-close]').addEventListener('click', fechar);
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) fechar(); });
+  dlg.addEventListener('close', function(){ if (ultimo) ultimo.focus(); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = form.elements;
+    if (!f.nome.value.trim() || !f.mensagem.value.trim() || !f.email.value.trim() || !f.email.checkValidity()){
+      msg.className = 'msg err'; msg.style.display = 'block';
+      msg.textContent = 'Preencha nome, um e-mail válido e a descrição do que acontece hoje.';
+      return;
+    }
+    var corpo = 'Serviço: '+f.assunto.value+'\nNome: '+f.nome.value+'\nEmpresa: '+(f.empresa.value || '-')+'\nE-mail: '+f.email.value+'\n\n'+f.mensagem.value;
+    window.location.href = 'mailto:rondinele.clemente@zeroeumsolucoes.com.br?subject='+encodeURIComponent('Proposta: '+f.assunto.value)+'&body='+encodeURIComponent(corpo);
+    msg.className = 'msg'; msg.style.display = 'block';
+    msg.textContent = 'Mensagem pronta no seu programa de e-mail. Falta só clicar em enviar.';
+  });
+})();
+</script>
+</body>
+</html>
