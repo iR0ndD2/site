@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zero e Um Soluções | Integrações, automações e extração de dados para empresas</title>
+<title>Zero e Um Soluções em Tecnologia | Integrações, automações e extração de dados para empresas</title>
 <meta name="description" content="Integramos sistemas, automatizamos rotinas e extraímos dados para empresas de qualquer porte e setor. Projetos sob medida, com escopo fechado e nota fiscal.">
-<meta property="og:title" content="Zero e Um Soluções">
+<meta property="og:title" content="Zero e Um Soluções em Tecnologia">
 <meta property="og:description" content="Integrações, automações e extração de dados para empresas.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zeroeumsolucoes.com.br/">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2310223A'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='28' fill='%23FFC72C' text-anchor='middle'%3E01%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310223A'/%3E%3Crect x='8' y='19' width='48' height='26' rx='13' fill='%23fff'/%3E%3Ccircle cx='42' cy='32' r='10' fill='%23FFC72C'/%3E%3Cline x1='42' y1='27' x2='42' y2='37' stroke='%2310223A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&display=swap" rel="stylesheet">
@@ -42,9 +42,9 @@ section{padding:112px 0}
 header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.mark{width:40px;height:40px;border-radius:9px;background:var(--ink);color:var(--yellow);display:grid;place-items:center;font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:-.04em}
-.brand b{font-stretch:115%;font-weight:750;font-size:1.05rem;letter-spacing:-.01em}
-.brand b span{display:block;font-size:.78rem;color:var(--steel);font-weight:400;line-height:1.1}
+.logo-mark{flex:none}
+.brand b{font-stretch:125%;font-weight:800;font-size:1.15rem;letter-spacing:-.02em;line-height:1.05}
+.brand b span{display:block;font-stretch:100%;font-size:.76rem;color:var(--steel);font-weight:500;letter-spacing:0;margin-top:2px}
 .menu{display:flex;align-items:center;gap:30px;list-style:none}
 .menu a{text-decoration:none;font-size:.95rem;color:var(--text);transition:color .2s}
 .menu a:hover{color:var(--ink)}
@@ -194,6 +194,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;
 footer a{text-decoration:none;color:var(--ink)}
 footer a:hover{text-decoration:underline}
 footer nav{display:flex;gap:24px}
+.foot-brand{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.foot-brand b{display:block;font-stretch:125%;font-weight:800;font-size:1rem;line-height:1.05}
+.foot-brand span{display:block;font-size:.74rem;color:var(--steel)}
 
 @media (max-width:1020px){
   .picker{grid-template-columns:1fr}
@@ -249,9 +252,9 @@ footer nav{display:flex;gap:24px}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Zero e Um Soluções, início">
-      <span class="mark" aria-hidden="true">01</span>
-      <b>Zero e Um Soluções<span>Integrações, automações e dados</span></b>
+    <a class="brand" href="#inicio" aria-label="Zero e Um Soluções em Tecnologia, início">
+      <svg class="logo-mark" viewBox="2 24 96 52" width="54" height="29" aria-hidden="true"><rect x="4" y="26" width="92" height="48" rx="24" fill="#10223A"/><circle cx="28" cy="50" r="9" fill="none" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="4"/><circle cx="72" cy="50" r="19" fill="#FFC72C"/><line x1="72" y1="41" x2="72" y2="59" stroke="#10223A" stroke-width="4.5" stroke-linecap="round"/></svg>
+      <b>Zero e Um<span>Soluções em Tecnologia</span></b>
     </a>
     <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -564,6 +567,7 @@ footer nav{display:flex;gap:24px}
 
 <footer>
   <div class="wrap">
+    <div class="foot-brand"><svg class="logo-mark" viewBox="2 24 96 52" width="44" height="24" aria-hidden="true"><rect x="4" y="26" width="92" height="48" rx="24" fill="#10223A"/><circle cx="28" cy="50" r="9" fill="none" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="4"/><circle cx="72" cy="50" r="19" fill="#FFC72C"/><line x1="72" y1="41" x2="72" y2="59" stroke="#10223A" stroke-width="4.5" stroke-linecap="round"/></svg><div><b>Zero e Um</b><span>Soluções em Tecnologia</span></div></div>
     <span>© <span id="ano">2026</span> Zero e Um Soluções. Itajaí, SC.</span>
     <nav aria-label="Links do rodapé">
       <a href="mailto:rondinele.clemente@zeroeumsolucoes.com.br">E-mail</a>
